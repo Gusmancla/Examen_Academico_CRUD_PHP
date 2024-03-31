@@ -65,7 +65,7 @@ CREATE TABLE Asignaturas (
     CreditosAcademicos INT,
     AnioAcademico INT,
     Semestre VARCHAR(10),
-    HorarioClases VARCHAR(50)
+    HorarioClases time
 );
 
 CREATE TABLE Temas (
@@ -84,7 +84,7 @@ CREATE TABLE Evaluaciones (
     PonderacionTeorico FLOAT,
     PonderacionRedaccion FLOAT,
     PonderacionLaboratorio FLOAT,
-    PonderacionTiempo FLOAT,
+    PonderacionTiempo TIME,
     --Referencia la columna Asignatura a la tabla Asignaturas en la columna CodigoAsignatura.
     FOREIGN KEY (Asignatura) REFERENCES Asignaturas(CodigoAsignatura)
 );

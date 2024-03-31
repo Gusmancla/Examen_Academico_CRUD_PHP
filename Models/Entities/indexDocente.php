@@ -2,7 +2,7 @@
 #incluir conexion de BD.
 include 'C:\xampp\htdocs\app_crud_ExamenesAcademicos\Models\Entities\conexion.php';
 #Sentencia sql para mostrar los datos almacenados en la DB.
-$sentencia = $db->query("SELECT * FROM Alumnos");
+$sentencia = $db->query("SELECT * FROM Docentes");
 $dato = $sentencia->fetchALL(PDO::FETCH_OBJ);
 #Prueba de reconocimiento de datos con print_r
 #print_r($dato);
@@ -12,7 +12,7 @@ $dato = $sentencia->fetchALL(PDO::FETCH_OBJ);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla Alumno</title>
+    <title>Tabla Docentes</title>
 </head>
 <body>
     <center>
@@ -33,20 +33,18 @@ $dato = $sentencia->fetchALL(PDO::FETCH_OBJ);
         </tr>
     </center>
     <center>
-        <h3>Lista de registros alumnos</h3>
-        <a href="insert/formAlumnoInsert.php"><button>Nuevo registro</button></a>
+        <h3>Lista de registros Docentes</h3>
+        <a href="insert/formDocenteInsert.php"><button>Nuevo registro</button></a>
         <table>
             <tr>
-                <td>Numero de matricula</td>
-                <td>Nombre</td>
-                <td>Grupo</td>                
+                <td>DNI</td>
+                <td>Nombre</td>                               
             </tr>
             <!--iniciando el foreach -->
             <?php foreach ($dato as $registro){?>
                 <tr>
-                    <td><?php echo $registro->NumeroMatricula;?></td>
+                    <td><?php echo $registro->DNI;?></td>
                     <td><?php echo $registro->Nombre;?></td>
-                    <td><?php echo $registro->Grupo;?></td>
                     <td><a href="UPDATE/formAlumnoUpdate.php"><button>Editar</button></a></td>
                     <td><a href="DELETE/deleteAlumno.php"><button>Eliminar</button></a></td>
                 </tr>
