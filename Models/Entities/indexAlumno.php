@@ -47,8 +47,9 @@ $dato = $sentencia->fetchALL(PDO::FETCH_OBJ);
                     <td><?php echo $registro->NumeroMatricula;?></td>
                     <td><?php echo $registro->Nombre;?></td>
                     <td><?php echo $registro->Grupo;?></td>
-                    <td><a href="UPDATE/formAlumnoUpdate.php"><button>Editar</button></a></td>
-                    <td><a href="DELETE/deleteAlumno.php?id=<?php echo $registro->NumeroMatricula;?>"><button>Eliminar</button></a></td>
+                     <!--Al momento de llamar al echo de la variable registro a la columna de la tabla correspondiente-->
+                    <td><a href="/app_crud_ExamenesAcademicos/Controllers/UPDATE/formAlumnoUpdate.php?id=<?php echo $registro->NumeroMatricula ?>"><button>Editar</button></a></td>
+                    <td><a href="/app_crud_ExamenesAcademicos/Controllers/DELETE/deleteAlumno.php?id=<?php echo $registro->NumeroMatricula ?>"><button>Eliminar</button></a></td>
                 </tr>
             <!--#finalizando el foreach -->            
             <?php }?>
