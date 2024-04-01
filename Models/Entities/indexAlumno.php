@@ -34,7 +34,7 @@ $dato = $sentencia->fetchALL(PDO::FETCH_OBJ);
     </center>
     <center>
         <h3>Lista de registros alumnos</h3>
-        <a href="insert/formAlumnoInsert.php"><button>Nuevo registro</button></a>
+        <a href="/app_crud_ExamenesAcademicos/Views/forms/usuarios/formAlumnoInsert.php"><button>Nuevo registro</button></a>
         <table>
             <tr>
                 <td>Numero de matricula</td>
@@ -48,7 +48,7 @@ $dato = $sentencia->fetchALL(PDO::FETCH_OBJ);
                     <td><?php echo $registro->Nombre;?></td>
                     <td><?php echo $registro->Grupo;?></td>
                     <td><a href="UPDATE/formAlumnoUpdate.php"><button>Editar</button></a></td>
-                    <td><a href="DELETE/deleteAlumno.php"><button>Eliminar</button></a></td>
+                    <td><a href="DELETE/deleteAlumno.php?id=<?php echo $registro->NumeroMatricula;?>"><button>Eliminar</button></a></td>
                 </tr>
             <!--#finalizando el foreach -->            
             <?php }?>
