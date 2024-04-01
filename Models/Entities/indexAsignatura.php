@@ -34,7 +34,7 @@ $dato = $sentencia->fetchALL(PDO::FETCH_OBJ);
     </center>
     <center>
         <h3>Lista de registros Asignaturas</h3>
-        <a href="insert/formAlumnoInsert.php"><button>Nuevo registro</button></a>
+        <a href="/app_crud_ExamenesAcademicos/Views/forms/usuarios/formAsignaruraInsert.php"><button>Nuevo registro</button></a>
         <table>
             <tr>
                 <td>Codigo de asignatura</td>
