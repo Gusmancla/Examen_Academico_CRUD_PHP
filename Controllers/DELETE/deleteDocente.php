@@ -4,7 +4,7 @@
 
 if (!isset($_GET['id'])) {
     # url de la pagina de inicio de la tabla x respecto al index_.php
-    header('Location: http://localhost/app_crud_ExamenesAcademicos/Models/Entities/indexAlumno.php');
+    header('Location: http://localhost/app_crud_ExamenesAcademicos/Models/Entities/indexDocente.php');
 }
 
 $EliminarRegistro = $_GET['id'];
@@ -12,13 +12,13 @@ $EliminarRegistro = $_GET['id'];
 include 'C:\xampp\htdocs\app_crud_ExamenesAcademicos\Models\Entities\conexion.php';
 
 #Sentecia Sql para eliminar registos en la tbla.
-$sentencia = $db->prepare("DELETE FROM Alumnos WHERE NumeroMatricula=?;");
+$sentencia = $db->prepare("DELETE FROM Docentes WHERE DNI=?;");
 $resultado = $sentencia->execute([$EliminarRegistro]);
 
 #VALIDACION DE REDIRECCION
 if ($resultado === true) {
     # url de la pagina de inicio de la tabla x respecto al index_.php
-    header('Location: http://localhost/app_crud_ExamenesAcademicos/Models/Entities/indexAlumno.php');
+    header('Location: http://localhost/app_crud_ExamenesAcademicos/Models/Entities/indexDocente.php');
 } else {
     echo '!!!-ERROR AL ELIMINAR-¡¡¡';
 }

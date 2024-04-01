@@ -55,8 +55,8 @@ $dato = $sentencia->fetchALL(PDO::FETCH_OBJ);
                     <td><?php echo $registro->AnioAcademico;?></td>
                     <td><?php echo $registro->Semestre;?></td>
                     <td><?php echo $registro->HorarioClases;?></td>
-                    <td><a href=""><button>Editar</button></a></td>
-                    <td><a href=""><button>Eliminar</button></a></td>
+                    <td><a href="/app_crud_ExamenesAcademicos/Controllers/UPDATE/formAsignaturasUpdate.php?id=<?php echo $registro->NumeCodigoAsignaturaroMatricula ?>"><button>Editar</button></a></td>
+                    <td><a href="/app_crud_ExamenesAcademicos/Controllers/DELETE/deleteAsignaturas.php?id=<?php echo $registro->CodigoAsignatura ?>"><button>Eliminar</button></a></td>
                 </tr>
             <!--#finalizando el foreach -->            
             <?php }?>

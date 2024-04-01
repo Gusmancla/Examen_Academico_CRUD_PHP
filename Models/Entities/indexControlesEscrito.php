@@ -47,8 +47,8 @@ $dato = $sentencia->fetchALL(PDO::FETCH_OBJ);
                     <td><?php echo $registro->IDControl;?></td>
                     <td><?php echo $registro->NumeroPreguntas;?></td>
                     <td><?php echo $registro->Fecha;?></td>
-                    <td><a href=""><button>Editar</button></a></td>
-                    <td><a href=""><button>Eliminar</button></a></td>
+                    <td><a href="/app_crud_ExamenesAcademicos/Controllers/UPDATE/formControlesEscritoUpdate.php?id=<?php echo $registro->IDControl ?>"><button>Editar</button></a></td>
+                    <td><a href="/app_crud_ExamenesAcademicos/Controllers/DELETE/deleteControlesEscrito.php?id=<?php echo $registro->IDControl ?>"><button>Eliminar</button></a></td>
                 </tr>
             <!--#finalizando el foreach -->            
             <?php }?>
